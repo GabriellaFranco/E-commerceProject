@@ -1,158 +1,109 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto Serif', serif;
+    margin: 0; 
+    padding: 0; 
 }
 
-body {
-  font-family: 'Roboto Serif', serif;
+/* Barra superior */
+.page-top-bar {
+    background-color: #F0DACD;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    margin: 0; 
+}
+
+/* Logo da loja */
+.shop-logo {
+    display: flex;
+    align-items: center;
+    margin-left: -15; 
+}
+
+.teddy-bear-on-logo {
+    height: 50px;
+    margin-left: 40px; 
+}
+
+.shop-name {
+    height: 40px; 
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 60px; 
     margin: 0;
     padding: 0;
 }
 
-.page-top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13px;
-  background-color: #F0DACD;
-  padding: 8px 12px;
-  text-align: center;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
-  background-color: white;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  margin: 0;
-}
-
-.shop-logo {
-  display: flex;
-  align-items: center;
-}
-
-.teddy-bear-on-logo {
-  height: 50px;
-  margin-right: 0;
-  margin-left: 30px;
-}
-
-.shop-name {
-  height: 40px;
-  margin-left: 0px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  flex-wrap: nowrap; 
-}
-
-nav ul {
-  display: flex;
-  gap: 55px;
-  justify-content: center;
-  list-style: none;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  padding: 10px 0;
-  margin-left: 15px;
-  
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px;
 }
 
 nav ul li a:hover {
     color: #007bff;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  white-space: nowrap;
-  font-weight: 500;
-}
-
+/* Ícones da navbar */
 .navbar-icons {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 15px; 
 }
 
-.navbar-icons a {
-    margin-right: -25px;
-}
-
-.navbar-icons img {
-    margin-right: 40px;
-    width: 18px;
-    height: 18px;
-    
+.navbar-icons a img {
+    width: 22px; 
+    height: 22px;
 }
 
 .navbar-button {
-  background-color: #89D3D1;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 20px;
-  font-size: 14px;
-  color: white;
-  cursor: pointer;
-  margin-right: 60px;
-  margin-left: 50px;
-  width: 130px;
-  height: 30px;
+    background-color: #89D3D1;
+    font-family: 'Roboto Serif', serif;
+    color: #fff;
+    padding: 8px 20px; 
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    margin-right: 50px;
+    margin-left: 40px;
+    border-radius: 25px; 
 }
 
 .navbar-button:hover {
     background-color: #0056b3;
 }
 
-.first-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.banner-offer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #d6a57c;
-  color: white;
-  padding: 12px;
-  border-radius: 10px;
-  font-size: 14px;
-  max-width: 90%;
-  text-align: center;
-}
-
+/* Seção do banner */
 .first-section {
     margin: 0; /* Remove margens */
     padding: 0; /* Remove preenchimentos */
 }
 
 .main-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimentos */
+    line-height: 0; /* Remove espaçamento extra causado por inline-block */
 }
 
 .main-banner img {
