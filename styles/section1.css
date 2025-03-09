@@ -1,113 +1,154 @@
 /* Estilos Gerais */
 body {
-    font-family: 'Roboto Serif', serif;
-    margin: 0; 
-    padding: 0; 
+  font-family: 'Roboto Serif', serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Barra superior */
 .page-top-bar {
-    background-color: #F0DACD;
-    padding: 0px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    border-bottom: 1px solid #ddd;
+  background-color: #F0DACD;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
 }
 
 /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    margin: 0; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  margin: 0;
 }
 
 /* Logo da loja */
 .shop-logo {
-    display: flex;
-    align-items: center;
-    margin-left: -15; 
+  display: flex;
+  align-items: center;
+  margin-left: -15;
 }
 
 .teddy-bear-on-logo {
-    height: 50px;
-    margin-left: 40px; 
+  height: 50px;
+  margin-left: 40px;
 }
 
 .shop-name {
-    height: 40px; 
+  height: 40px;
 }
 
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 60px; 
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
 }
 
 nav ul li a:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 /* Ícones da navbar */
 .navbar-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px; 
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .navbar-icons a img {
-    width: 22px; 
-    height: 22px;
+  width: 22px;
+  height: 22px;
 }
 
 .navbar-button {
-    background-color: #89D3D1;
-    font-family: 'Roboto Serif', serif;
-    color: #fff;
-    padding: 8px 20px; 
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    margin-right: 50px;
-    margin-left: 40px;
-    border-radius: 25px; 
+  background-color: #89D3D1;
+  font-family: 'Roboto Serif', serif;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  margin-right: 50px;
+  margin-left: 40px;
+  border-radius: 25px;
 }
 
 .navbar-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
-/* Seção do banner */
+/* Banner de oferta */
+.banner-offer {
+  position: relative;
+  /* Contêiner relativo para posicionar as imagens */
+  width: 100%;
+  /* Largura total */
+  height: 200px;
+  /* Altura do banner de oferta (ajuste conforme necessário) */
+  margin: 0;
+  /* Remove margens */
+  padding: 0;
+  /* Remove preenchimentos */
+  z-index: 1;
+  /* Garante que o banner de oferta fique acima do main banner */
+}
+
+/* Imagem de fundo do banner de oferta */
+.banner-offer-background {
+  width: 50%;
+  height: 60%;
+  object-fit: cover;
+  /* Garante que a imagem cubra todo o espaço */
+  position: absolute;
+  /* Posicionamento absoluto */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.banner-offer-overlay {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  object-fit: cover;
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
 .first-section {
-    margin: 0; /* Remove margens */
-    padding: 0; /* Remove preenchimentos */
+  position: relative;
+  z-index: 0;
 }
 
 .main-banner {
-    margin: 0; /* Remove margens */
-    padding: 0; /* Remove preenchimentos */
-    line-height: 0; /* Remove espaçamento extra causado por inline-block */
+  margin: 0;
+  padding: 0;
+  line-height: 0;
 }
 
 .main-banner img {
-    width: 100%;
-    height: auto;
-    display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
 }
