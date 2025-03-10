@@ -1,14 +1,18 @@
-/* Estilos Gerais */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
 body {
   font-family: 'Roboto Serif', serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-/* Barra superior */
 .page-top-bar {
   background-color: #F0DACD;
-  padding: 0px 30px;
+  padding: 5px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,37 +20,33 @@ body {
   border-bottom: 2px solid #ddd;
 }
 
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 5%;
   background-color: #fff;
-  margin: 0;
 }
 
-/* Logo da loja */
 .shop-logo {
   display: flex;
   align-items: center;
-  margin-left: -15;
 }
 
 .teddy-bear-on-logo {
   height: 50px;
-  margin-left: 40px;
+  margin-left: 15px;
 }
 
 .shop-name {
-  height: 40px;
+  height: 35px;
 }
 
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 60px;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
@@ -56,37 +56,36 @@ nav ul li a {
   color: #333;
   font-size: 16px;
   font-weight: 500;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 nav ul li a:hover {
   color: #007bff;
 }
 
-/* Ícones da navbar */
 .navbar-icons {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .navbar-icons a img {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 .navbar-button {
   background-color: #89D3D1;
   font-family: 'Roboto Serif', serif;
   color: #fff;
-  padding: 8px 20px;
+  padding: 6px 15px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   border: none;
-  margin-right: 50px;
-  margin-left: 40px;
-  border-radius: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 20px;
 }
 
 .navbar-button:hover {
@@ -94,66 +93,67 @@ nav ul li a:hover {
 }
 
 .banner-offer {
-  position: r elative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
   z-index: 1;
-  line-height: 0;
+}
+
+.banner-offer-background-container,
+.banner-offer-overlay-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
 }
 
 .banner-offer-background {
   width: 50%;
-  height: 16%;
-  color: #F7F2EC;
-  object-fit: cover;
-  position: absolute;
-  top: 117px;
-  margin-left: 150px;
-  z-index: 1;
+  max-width: 600px;
+  margin-top: 9.5%;
+  margin-left: -40%;
+  height: auto;
+  z-index: 4;
 }
 
 .banner-offer-overlay {
   position: absolute;
   width: 50%;
-  height: 17%;
-  object-fit: cover;
-  top: 178px;
-  left: 50%;
-  margin-left: 150px;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 2;
+  top: 10%;
+  left: 60%;
+  max-width: 800px;
+  height: auto;
+  transform: translate(-50%);
+  z-index: 5;
 }
 
 .overlay-text-top {
   position: absolute;
-  top: 17%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 24px;
-  font-family: 'Roboto Serif', serif;
+  font-size: clamp(14px, 2vw, 24px);
+  top: 10%;
+  left: 15%;
   font-weight: 500;
   text-align: center;
-  z-index: 2;
-  padding: 10px;
-  border-radius: 5px;
+  color: white;
+  z-index: 6;
+  width: 90%;
 }
 
 .overlay-text-bottom {
   position: absolute;
-  top: 17%;
-  left: 28%;
-  font-family: 'Roboto Serif', serif;
-  transform: translate(-50%, -50%);
-  color: black;
-  font-size: 24px;
+  font-size: clamp(14px, 2vw, 24px);
+  margin-top: 7%;
+  margin-left: -45%;
   font-weight: 500;
   text-align: center;
-  z-index: 2;
-  padding: 10px;
-  border-radius: 5px;
+  color: black;
+  z-index: 6;
 }
 
 .first-section {
@@ -173,4 +173,154 @@ nav ul li a:hover {
   width: 100%;
   height: auto;
   display: block;
+  z-index: 0;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 20px;
+  }
+
+  .navbar-icons {
+    gap: 8px;
+  }
+
+  .navbar-button {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 7%;
+  }
+
+  .menu-toggle {
+    order: 1;
+  }
+
+  .shop-logo {
+    order: 2;
+  }
+
+  .shop-name {
+    display: none;
+  }
+
+  .teddy-bear-on-logo {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-icons {
+    margin-top: 10px;
+    height: 5px;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar-button {
+    width: 100px;
+    height: auto;
+    font-size: 5px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-top-bar {
+    font-size: 8px;
+    padding: 0px 5px;
+  }
+
+  .teddy-bear-on-logo {
+    height: 30px;
+    margin-left: 0;
+  }
+
+  .shop-name {
+    height: 30px;
+  }
+
+  nav ul {
+    display: none;
+    /* Esconde o menu em telas muito pequenas */
+  }
+
+  .banner-offer {
+    display: none;
+  }
+
+  .navbar-icons {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .navbar-button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner-offer-overlay {
+    width: 60%;
+    top: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-offer-overlay {
+    width: 70%;
+    top: 60%;
+  }
+
+  .overlay-text-top {
+    font-size: clamp(12px, 1.8vw, 20px);
+    top: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-offer-overlay {
+    width: 80%;
+    top: 65%;
+  }
+
+  .overlay-text-top {
+    font-size: clamp(10px, 4vw, 18px);
+    top: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .banner-offer-background,
+  .banner-offer-overlay {
+    width: 70%;
+    /* Aumenta a largura em telas menores */
+  }
 }

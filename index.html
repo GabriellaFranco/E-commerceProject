@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Teddy Shop - Ecommerce</title>
     <link rel="stylesheet" href="styles/section1.css" />
     <link
@@ -18,6 +18,9 @@
       <p>Informazioni Di Consegna</p>
     </div>
     <header>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+      </div>
       <div class="shop-logo">
         <img class="teddy-bear-on-logo" src="./assets/Teddy navbar logo.png" alt="Tebby Bear on Logo">
         <img class="shop-name" src="./assets/Teddy Shop navbar logo.png" alt="Teddy Shop Logo" />
@@ -41,12 +44,16 @@
       </div>
     </header>
     <div class="banner-offer">
-      <img src="./assets/Section1 offer banner bottom.png" alt="Fundo do Banner de Oferta"
-        class="banner-offer-background">
-      <p class="overlay-text-bottom">"Ecco L'offerta GUND: </p>
-      <img src="./assets/Section1 offer banner top.png" alt="Sobreposição do Banner de Oferta"
-        class="banner-offer-overlay">
-      <p class="overlay-text-top">40% Di Sconto Dal 20 Aprile Al 5 Maggio"</p>
+      <div class="banner-offer-background-container">
+        <img src="./assets/Section1 offer banner bottom.png" alt="Fundo do Banner de Oferta"
+          class="banner-offer-background">
+        <p class="overlay-text-bottom">"Ecco L'offerta GUND: </p>
+      </div>
+      <div class="banner-offer-overlay-container">
+        <img src="./assets/Section1 offer banner top.png" alt="Sobreposição do Banner de Oferta"
+          class="banner-offer-overlay">
+        <p class="overlay-text-top">40% Di Sconto Dal 20 Aprile Al 5 Maggio"</p>
+      </div>
     </div>
     </div>
     <section class="first-section">
@@ -55,5 +62,7 @@
       </div>
     </section>
   </body>
+
+  <script src="./scripts/index.js"></script>
 
 </html>
