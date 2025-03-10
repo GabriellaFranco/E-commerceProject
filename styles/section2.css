@@ -15,7 +15,7 @@
 .explore-section-intro h1 {
     color: #29180F;
     margin-top: 0;
-    font-size: 48px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
@@ -25,18 +25,19 @@
     margin-bottom: 40px;
 }
 
-/* Estilos para as coleções */
 .explore-section-collections {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .explore-section-collection-card {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: wrap;
+    gap: 60px;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
@@ -46,12 +47,15 @@
     background-color: #fff;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
     flex-direction: column;
     overflow: hidden;
-    display: flex;
     width: 30%;
+    /* Permite que 3 cards fiquem lado a lado */
+    min-width: 280px;
+    /* Evita que fiquem muito pequenos */
     align-items: center;
-    text-align: left;
+    text-align: center;
     transition: transform 0.3s ease;
     border: 3px solid white;
 }
@@ -72,7 +76,6 @@
 }
 
 .collection-card-teddy-text {
-    font-size: 5rem;
     color: #29180F;
     text-align: center;
 }
@@ -82,46 +85,30 @@
     text-align: center;
     color: #29180F;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .collection-card-teddy-text p {
-    font-size: 1rem;
-    color: #666;
+    font-size: 0.9rem;
+    color: #000000E5;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
-    .collection-card-teddy-container {
-        flex-direction: column;
-        text-align: center;
+    .explore-section-collection-card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .collection-card-teddy-container img {
-        margin-right: 0;
-        margin-bottom: 15px;
+    .collection-card-teddy-container {
+        width: 45%;
+        /* Dois cards por linha */
     }
 }
 
 @media (max-width: 480px) {
-    .explore-section-intro h1 {
-        font-size: 2rem;
-    }
-
-    .explore-section-intro p {
-        font-size: 1rem;
-    }
-
-    .collection-card-teddy-container img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .collection-card-teddy-text h2 {
-        font-size: 1.3rem;
-    }
-
-    .collection-card-teddy-text p {
-        font-size: 0.9rem;
+    .collection-card-teddy-container {
+        width: 100%;
+        /* Um card por linha no mobile */
     }
 }
