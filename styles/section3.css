@@ -87,20 +87,45 @@
     font-weight: bold;
     color: white;
     background-color: #BF8B70;
-    /* Cor de fundo do botão */
     border-radius: 30px;
-    /* Bordas arredondadas */
-    border: 1px solid white;
-    /* Borda branca fina */
+    border: 2px solid white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
-    /* Sombra mais escura e suave */
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .explore-button:hover {
     background-color: #A97F6E;
-    /* Cor de fundo no hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 1);
-    /* Sombra mais intensa no hover */
+}
+
+@media (max-width: 768px) {
+    .products {
+        gap: 10px;
+        padding: 15px;
+        margin-top: -40px;
+    }
+
+    .product-card {
+        width: calc(50% - 10px);
+        max-width: none;
+        padding: 5px;
+    }
+
+    .image-container {
+        height: 150px;
+    }
+
+    .product-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .price {
+        font-size: 1.1rem;
+    }
+
+    .explore-button {
+        padding: 10px 30px;
+        font-size: 0.9rem;
+    }
 }
