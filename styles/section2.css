@@ -131,9 +131,7 @@
 
 .button-icon {
     width: 40px;
-    /* Ajustei o tamanho da imagem */
     height: 40px;
-    /* Ajustei o tamanho da imagem */
     object-fit: contain;
 }
 
@@ -146,23 +144,17 @@
 
     .collection-card-teddy-container {
         width: 45%;
-        /* Dois cards por linha em tablets */
         min-width: 200px;
-        /* Evita que fiquem muito pequenos */
     }
 
     .spring-button {
         font-size: 1.5rem;
-        /* Reduz o tamanho da fonte em tablets */
         height: 50px;
-        /* Reduz a altura em tablets */
         padding: 8px 16px;
-        /* Ajusta o espaçamento interno */
     }
 
     .button-icon {
         width: 40px;
-        /* Reduz o tamanho da imagem em tablets */
         height: 40px;
     }
 }
