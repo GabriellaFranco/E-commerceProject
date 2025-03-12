@@ -81,3 +81,37 @@
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    .container-section-5 {
+        gap: 10px;
+        padding: 25px;
+    }
+
+    .product-card-section-5 {
+        width: calc(50% - 10px);
+        margin-top: 80px;
+        margin-bottom: -70px;
+        padding: 7px;
+    }
+
+    .image-container-section-5 {
+        height: 150px;
+
+    }
+
+    #teddy-button-container {
+        margin-top: -50px;
+        padding: 30px 10px;
+    }
+
+    #teddy-button {
+        font-size: 1.2rem;
+        padding: 4px 10px;
+        height: 60px;
+    }
+
+    #teddy-button-icon {
+        height: 40px;
+    }
+}
