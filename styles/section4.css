@@ -46,6 +46,7 @@
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
     position: relative;
+
 }
 
 .feature-section-card:hover,
@@ -60,15 +61,44 @@
     display: block;
 }
 
-.feature-card .material-icon {
+.material-icon {
     position: absolute;
-    top: 25px;
-    left: 173px;
+    top: 20px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
 }
 
-.feature-card .material-icon img {
-    width: 40px;
-    height: 40px;
+.material-icon img {
+    width: 100%;
+    height: auto;
+    margin-left: -305px;
+}
+
+.slider-dots {
+    text-align: center;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #3A2215;
 }
 
 @media (max-width: 768px) {
@@ -80,31 +110,39 @@
     .feature-section-card,
     .feature-card {
         width: 100%;
-        max-width: 400px;
+        max-width: 320px;
+        display: none;
+        margin-top: -10px;
+
+    }
+
+    .feature-section-card.active,
+    .feature-card.active {
+        display: block;
     }
 
     .container-features-section-title h2 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .flor-esquerda,
     .flor-direita {
         width: 35px;
     }
-}
 
-@media (max-width: 480px) {
-    .container-features-section-title h2 {
-        font-size: 1.8rem;
+    .material-icon {
+        top: 15px;
+        right: 10px;
+        width: 45px;
+        height: 45px;
     }
 
-    .flor-esquerda,
-    .flor-direita {
-        width: 30px;
+    .material-icon img {
+        margin-left: -253px;
     }
 
-    .feature-card .material-icon img {
-        width: 30px;
-        height: 30px;
+    .dot {
+        width: 8px;
+        height: 8px;
     }
 }
