@@ -1,16 +1,15 @@
 .client-review-section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
     background-color: #f8f1eb;
     text-align: center;
 }
 
 .client-review-intro {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,89 +28,173 @@
     margin: 0;
 }
 
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+}
+
 .bigger-review-card {
-    flex: 1 1 100%;
-    max-width: 800px;
+    flex: 1;
+    max-width: 600px;
     background-color: white;
+    border-radius: 30px;
     padding: 0;
-    border-radius: 60px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #C9B079;
+    min-height: 400px;
+
+}
+
+.bigger-review-card .bigger-review-image {
+    width: 100%;
+    height: 290px;
+    padding: 0;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    object-fit: cover;
 }
 
 .bigger-review-card:hover {
     transform: scale(1.02);
 }
 
-.bigger-review-card .bigger-review-image {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    margin-bottom: 20px;
+.bigger-review-card h2 {
+    font-family: 'Roboto Serif', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 30px;
+    margin-right: 10px;
+    color: #29180F;
+    margin-bottom: 10px;
 }
 
-.smaller-review-card-1,
-.smaller-review-card-2 {
-    flex: 1 1 calc(50% - 20px);
-    max-width: 400px;
+.bigger-review-card p {
+    font-family: 'Roboto Serif', serif;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #555;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.bigger-review-card .discover-more {
+    background-color: transparent;
+    font-size: 0.8rem;
+    color: #29180F;
+    font-weight: 600;
+    margin-left: -420px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.bigger-review-card .discover-more:hover {
+    color: #3E2A1F;
+    border-color: #3E2A1F;
+}
+
+.smaller-cards-container {
+    flex: 1;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.smaller-review-card {
     background-color: white;
     border-radius: 20px;
     padding: 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: stretch;
+    border: 3px solid #C9B079;
 }
 
-.smaller-review-card-1:hover,
-.smaller-review-card-2:hover {
+.smaller-review-card:nth-child(1) {
+    background-color: #E1EDE9;
+    /* Cor de fundo para o primeiro cartão */
+}
+
+.smaller-review-card:nth-child(2) {
+    background-color: #F0DACD;
+    /* Cor de fundo para o segundo cartão */
+}
+
+.smaller-review-card:hover {
     transform: scale(1.02);
 }
 
-.smaller-review-card-1 .smaller-review-image-1,
-.smaller-review-card-2 .smaller-review-image-2 {
-    width: 100%;
-    height: 200px;
-    border-radius: 20px 20px 0 0;
+.smaller-review-card .smaller-review-image {
+    width: 40%;
+    height: auto;
+    border-radius: 20px 0 0 20px;
     object-fit: cover;
 }
 
-.smaller-review-card-1 .text-content,
-.smaller-review-card-2 .text-content {
+.smaller-review-card .text-content {
+    width: 60%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
 }
 
-.smaller-review-card-1 h2,
-.smaller-review-card-2 h2 {
+.smaller-review-card h2 {
     font-family: 'Roboto Serif', serif;
     font-size: 1.5rem;
     color: #29180F;
     margin-bottom: 10px;
 }
 
-.smaller-review-card-1 p,
-.smaller-review-card-2 p {
+.smaller-review-card p {
     font-family: 'Roboto Serif', serif;
-    font-size: 1rem;
-    color: #555;
+    font-size: 0.8rem;
+    color: #000000E5;
     margin-bottom: 20px;
 }
 
 .discover-more {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #29180F;
-    color: white;
+    padding: 10px 10px;
+    background-color: transparent;
+    font-weight: 600;
+    color: #29180F;
     border-radius: 25px;
     text-decoration: none;
     font-family: 'Roboto Serif', serif;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+    font-size: 0.7rem;
+    transition: all 0.3s ease;
 }
 
 .discover-more:hover {
-    background-color: #3E2A1F;
+    color: #3E2A1F;
+    border-color: #3E2A1F;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bigger-review-card {
+        max-width: 100%;
+    }
+
+    .smaller-cards-container {
+        max-width: 100%;
+    }
 }
