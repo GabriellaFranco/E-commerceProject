@@ -100,3 +100,58 @@
     color: #000000;
     font-size: 0.7rem;
 }
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10px;
+        padding-bottom: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-text p {
+        font-size: 0.8rem;
+    }
+
+    .subscribe {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .subscribe form {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .subscribe input {
+        width: 100%;
+    }
+
+    .subscribe button {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .info {
+        flex-wrap: wrap;
+        margin: 20px 10px;
+    }
+
+    .column {
+        flex: 1 1 45%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .column h3 {
+        font-size: 1rem;
+    }
+
+    .column ul li {
+        font-size: 0.7rem;
+    }
+}
