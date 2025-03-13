@@ -1,15 +1,13 @@
 #heart-button-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: -120px;
-    padding: 40px 0;
+    margin-top: -100px;
+    position: absolute;
+    left: 50%;
     text-align: center;
-    position: relative;
-    z-index: 1;
+    transform: translateX(-50%);
 }
 
 #heart-button {
+    position: relative;
     font-family: 'Roboto Serif', serif;
     font-style: italic;
     font-weight: 500;
@@ -22,6 +20,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 30px;
     height: 60px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -41,7 +40,11 @@
 .client-opinion-section {
     background-color: #E1EDE9;
     text-align: center;
-    padding: 60px 0;
+    min-height: 50vh;
+    margin-top: -60px;
+    width: 100vw;
+    padding: 130px 0;
+    box-sizing: border-box;
 }
 
 .client-opinion-section-grid {
@@ -61,6 +64,7 @@
     text-align: left;
     border: 3px solid #C9B079;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .client-opinion-section-card:hover {
@@ -112,4 +116,74 @@
     font-size: 0.8rem;
     color: #000000E5;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    #heart-button-container {
+        margin-top: -100px;
+    }
+
+    #heart-button {
+        font-size: 1rem;
+        padding: 6px 20px;
+        height: 50px;
+    }
+
+    #heart-button-icon {
+        height: 30px;
+        width: 35px;
+    }
+
+    .client-opinion-section {
+        padding: 80px 0;
+    }
+
+    .client-opinion-section-grid {
+        gap: 20px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+    }
+
+    .client-opinion-section-card {
+        max-width: 90%;
+        height: auto;
+        padding: 15px;
+        margin-left: 10px;
+        scroll-snap-align: start;
+        flex: 0 0 100%;
+        margin-bottom: 0;
+    }
+
+    .client-opinion-text {
+        font-size: 0.9rem;
+    }
+
+    .client-identification .letter {
+        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+    }
+
+    .client-identification .author {
+        font-size: 0.8rem;
+    }
+
+    .client-identification .role {
+        font-size: 0.7rem;
+    }
+
+    .client-opinion-section-card:not(.active) {
+        display: none;
+    }
+
+    .client-opinion-section-card.active {
+        display: block;
+    }
+
+    .client-opinion-section-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
 }
