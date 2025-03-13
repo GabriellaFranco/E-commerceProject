@@ -1,9 +1,9 @@
 let slideIndex = 1;
 
-function slideResponsivity(position) {
+function slideResponsivity(position, className) {
 
-    let slides = document.getElementsByClassName("feature-section-card");
-    let dots = document.getElementsByClassName("dot");
+    let slides = document.getElementsByClassName(className);
+    let dots = document.getElementsByClassName(`${className}-dot`);
 
     if (position > dots.length) {
         slideIndex = 1;
@@ -26,8 +26,8 @@ function slideResponsivity(position) {
     dots[slideIndex - 1].classList.add("active");
 }
 
-function currentSlide(i) {
-    slideResponsivity(i);
+function currentSlide(i, className) {
+    slideResponsivity(i, className);
 }
 
 function toggleMenu() {
