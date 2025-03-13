@@ -1,3 +1,7 @@
+function toggleMenu() {
+    document.querySelector(".navbar ul").classList("show")
+}
+
 let slideIndex = 1;
 
 function slideResponsivity(position, className) {
@@ -30,6 +34,18 @@ function currentSlide(i, className) {
     slideResponsivity(i, className);
 }
 
-function toggleMenu() {
-    document.querySelector(".navbar ul").classList("show")
+function emailValidator() {
+    document.querySelector('form').addEventListener('submit', function (event) {
+        const emailInput = document.getElementById('userEmail');
+        const email = emailInput.value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            alert('Per favore, inserisci un indirizzo email valido.');
+            event.preventDefault();
+        }
+    });
 }
+
+emailValidator()
+
