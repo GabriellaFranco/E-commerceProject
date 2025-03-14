@@ -45,16 +45,20 @@ function currentSlide(i, className) {
 
 function emailValidator() {
     document.querySelector('form').addEventListener('submit', function (event) {
+        event.preventDefault();
         const emailInput = document.getElementById('userEmail');
         const email = emailInput.value;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const messageDiv = document.getElementById('message');
 
         if (!emailPattern.test(email)) {
-            alert('Per favore, inserisci un indirizzo email valido.');
-            event.preventDefault();
+            messageDiv.textContent = 'Per favore, inserisci un indirizzo email valido.';
+            messageDiv.className = 'error';
         }
         else {
-            alert('Email inviata con successo!');
+            messageDiv.textContent = 'Email inviata con successo!';
+            messageDiv.className = 'success';
+            emailInput.value = '';
         }
     });
 }
