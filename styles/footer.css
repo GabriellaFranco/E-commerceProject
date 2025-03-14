@@ -1,0 +1,60 @@
+.footer {
+    background-color: #FFFFFF;
+    color: #000000E5;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin-left: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-images {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.teddy-bear {
+    width: 50px;
+    height: auto;
+}
+
+.teddy-shop {
+    width: 80px;
+    height: auto;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-right: -230px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        margin-left: 20px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .teddy-bear {
+        margin-left: 10px;
+        height: 40px;
+        width: 30px;
+    }
+
+    .teddy-shop {
+        margin-left: -10px;
+        height: 30px;
+        width: 50px;
+    }
+
+    .footer p {
+        margin-right: 20px;
+        font-size: 0.6rem;
+    }
+}
