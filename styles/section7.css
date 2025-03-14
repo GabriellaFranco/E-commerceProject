@@ -28,7 +28,7 @@
 }
 
 #heart-button:hover {
-    background-color: #6FB3B1;
+    background-color: lightblue;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
 }
 
@@ -157,7 +157,7 @@
     }
 
     .client-opinion-text {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .client-identification .letter {

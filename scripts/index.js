@@ -1,5 +1,14 @@
-function toggleMenu() {
-    document.querySelector(".navbar ul").classList("show")
+function activateMenu() {
+    const navUl = document.querySelector("nav ul");
+    navUl.classList.toggle("active");
+
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            const navUl = document.querySelector("nav ul");
+            navUl.classList.remove("active");
+        });
+    });
 }
 
 let slideIndex = 1;
@@ -36,13 +45,20 @@ function currentSlide(i, className) {
 
 function emailValidator() {
     document.querySelector('form').addEventListener('submit', function (event) {
+        event.preventDefault();
         const emailInput = document.getElementById('userEmail');
         const email = emailInput.value;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const messageDiv = document.getElementById('message');
 
         if (!emailPattern.test(email)) {
-            alert('Per favore, inserisci un indirizzo email valido.');
-            event.preventDefault();
+            messageDiv.textContent = 'Per favore, inserisci un indirizzo email valido.';
+            messageDiv.className = 'error';
+        }
+        else {
+            messageDiv.textContent = 'Email inviata con successo!';
+            messageDiv.className = 'success';
+            emailInput.value = '';
         }
     });
 }

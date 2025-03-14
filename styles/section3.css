@@ -108,21 +108,21 @@
     }
 
     .product-card {
-        width: calc(50% - 10px);
+        width: 40%;
         max-width: none;
         padding: 5px;
     }
 
     .image-container {
-        height: 150px;
+        height: 120px;
     }
 
     .product-card h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .price {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .explore-button {

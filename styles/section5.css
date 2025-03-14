@@ -29,7 +29,7 @@
 }
 
 #teddy-button:hover {
-    background-color: #6FB3B1;
+    background-color: lightblue;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
 }
 
@@ -89,14 +89,19 @@
     }
 
     .product-card-section-5 {
-        width: calc(50% - 10px);
+        width: 45%;
         margin-top: 80px;
         margin-bottom: -70px;
         padding: 7px;
     }
 
+    .product-card-section-5 h3,
+    .price {
+        font-size: 1rem;
+    }
+
     .image-container-section-5 {
-        height: 150px;
+        height: 125px;
 
     }
 

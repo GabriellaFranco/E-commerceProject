@@ -122,7 +122,7 @@
     }
 
     .container-features-section-title h2 {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 
     .flor-esquerda,
@@ -145,4 +145,5 @@
         width: 8px;
         height: 8px;
     }
+
 }
