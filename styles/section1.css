@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html,
+body {
+  font-family: 'Roboto Serif', serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.page-top-bar {
+  background-color: #F0DACD;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.shop-logo {
+  display: flex;
+  align-items: center;
+}
+
+.teddy-bear-on-logo {
+  height: 50px;
+  margin-left: 15px;
+}
+
+.shop-name {
+  height: 35px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 0;
+  border-bottom: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-icons a img {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar-button {
+  background-color: #89D3D1;
+  font-family: 'Roboto Serif', serif;
+  color: #fff;
+  padding: 6px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.navbar-button:hover {
+  background-color: #0080b3;
+}
+
+.banner-offer {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  z-index: 1;
+}
+
+.banner-offer-background-container,
+.banner-offer-overlay-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.banner-offer-background {
+  width: 50%;
+  max-width: 600px;
+  margin-top: 9.3%;
+  margin-left: -40%;
+  height: auto;
+  z-index: 4;
+}
+
+.banner-offer-overlay {
+  position: absolute;
+  width: 50%;
+  top: 9.5%;
+  left: 60%;
+  max-width: 800px;
+  height: auto;
+  transform: translate(-50%);
+  z-index: 5;
+}
+
+.overlay-text-top {
+  position: absolute;
+  font-size: clamp(14px, 2vw, 24px);
+  top: 10%;
+  left: 15%;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  z-index: 6;
+  width: 90%;
+}
+
+.overlay-text-bottom {
+  position: absolute;
+  font-size: clamp(14px, 2vw, 24px);
+  margin-top: 7%;
+  margin-left: -45%;
+  font-weight: 500;
+  text-align: center;
+  color: black;
+  z-index: 6;
+}
+
+.first-section {
+  position: relative;
+  z-index: 0;
+  margin-top: 0;
+}
+
+.main-banner {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.main-banner img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 0;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .page-top-bar {
+    font-size: 8px;
+    padding: 0 8px;
+  }
+
+  header {
+    padding: 10px 3%;
+  }
+
+  .teddy-bear-on-logo {
+    height: 40px;
+    margin-left: 0;
+  }
+
+  .shop-name {
+    height: 25px;
+    margin-right: 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  .navbar-icons a img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .navbar-button {
+    padding: 5px 10px;
+    font-size: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .banner-offer-background {
+    width: 40%;
+    margin-top: 35px;
+    margin-left: -40%;
+  }
+
+  .banner-offer-overlay {
+    width: 50%;
+    top: 15%;
+    left: 60%;
+  }
+
+  .overlay-text-top {
+    font-size: 6px;
+    margin-top: 8px;
+    left: 15%;
+  }
+
+  .overlay-text-bottom {
+    font-size: 6px;
+    margin-top: 28px;
+    margin-left: -45%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    width: 200px;
+    background-color: #fff;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  nav ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

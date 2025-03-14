@@ -1,0 +1,182 @@
+.newsletter-section {
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    background-color: #F0DACD;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 6px solid #C9B079;
+    margin-left: 20px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.header-text h1 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #29180F;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    text-align: left;
+    color: #000000E5;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.subscribe {
+    text-align: right;
+}
+
+.subscribe form {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.subscribe input {
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #000000E5;
+}
+
+.subscribe button {
+    padding: 10px 20px;
+    background-color: #BF8B70;
+    color: #fff;
+    border: 1px solid #000000E5;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.subscribe button:hover {
+    background-color: #555;
+}
+
+.subscribe p {
+    color: #000000;
+    font-size: 0.7rem;
+    text-align: left;
+}
+
+.subscribe a {
+    color: #000000;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 20px 30px;
+    padding-bottom: 20px;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.column h3 {
+    color: #29180F;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.column ul li {
+    margin: 10px 0;
+    color: #000000;
+    font-size: 0.7rem;
+}
+
+#message {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+}
+
+#message.success {
+    color: green;
+}
+
+#message.error {
+    color: red;
+}
+
+.info ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.info ul li a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 10px;
+        padding-bottom: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-text p {
+        font-size: 0.8rem;
+    }
+
+    .subscribe {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .subscribe form {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .subscribe input {
+        width: 100%;
+    }
+
+    .subscribe button {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    .info {
+        flex-wrap: wrap;
+        margin: 20px 10px;
+    }
+
+    .column {
+        flex: 1 1 45%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .column h3 {
+        font-size: 1rem;
+    }
+
+    .column ul li {
+        font-size: 0.7rem;
+    }
+}
