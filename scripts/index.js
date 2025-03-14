@@ -1,5 +1,14 @@
-function toggleMenu() {
-    document.querySelector(".navbar ul").classList("show")
+function activateMenu() {
+    const navUl = document.querySelector("nav ul");
+    navUl.classList.toggle("active");
+
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            const navUl = document.querySelector("nav ul");
+            navUl.classList.remove("active");
+        });
+    });
 }
 
 let slideIndex = 1;
@@ -43,6 +52,9 @@ function emailValidator() {
         if (!emailPattern.test(email)) {
             alert('Per favore, inserisci un indirizzo email valido.');
             event.preventDefault();
+        }
+        else {
+            alert('Email inviata con successo!');
         }
     });
 }
